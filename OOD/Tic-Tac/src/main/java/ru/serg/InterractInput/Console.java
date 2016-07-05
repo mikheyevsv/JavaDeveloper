@@ -11,16 +11,16 @@ public class Console implements UserInput {
 
     private Scanner scanner = new Scanner(System.in);
 
-    @Override
+
     public String askUser(String question, int fieldSize) {
         System.out.print(question);
         while (true) {
             try {
-
                     String nextLine = scanner.nextLine();
                     if (nextLine.length() != 2) {
                         throw new Exceptions("going beyond the field");
-                    } else if (Character.getNumericValue(nextLine.charAt(0)) > fieldSize || Character.getNumericValue(nextLine.charAt(1)) > fieldSize) {
+                    } else if (Character.getNumericValue(nextLine.charAt(0)) > fieldSize ||
+                               Character.getNumericValue(nextLine.charAt(1)) > fieldSize) {
                         throw new Exceptions("going beyond the field");
                     } else {
                         Long.parseLong(nextLine);

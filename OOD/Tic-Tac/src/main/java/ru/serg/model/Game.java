@@ -169,7 +169,6 @@ public class Game {
     public void makeMove(String cell){
         int x = Character.getNumericValue(cell.charAt(0));
         int y = Character.getNumericValue(cell.charAt(1));
-
         if (field[x][y] == null){
             field[x][y] = getNextAI();
             }else {
