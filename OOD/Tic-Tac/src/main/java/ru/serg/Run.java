@@ -28,14 +28,15 @@ public class Run {
                 game.makeMove(game.getFreeCells());
                 game.printGameField();
             }else {
-                game.makeMove(this.input.askUser("ты ходи", fieldSize));
+                game.makeMove(this.input.askUser("you go", fieldSize));
             }
         }while (!game.isStep());
-        System.out.println("Конец всему");
+        System.out.println("\n" +
+                "The end of everything");
     }
 
     public static void main(String[] args) {
-        Game game = new Game(4);
+        Game game = new Game(3);
         game.gameInitialize();
 
         Player comp = new Player();
