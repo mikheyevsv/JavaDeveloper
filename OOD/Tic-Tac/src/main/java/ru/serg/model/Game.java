@@ -169,10 +169,18 @@ public class Game {
     public void makeMove(String cell){
         int x = Character.getNumericValue(cell.charAt(0));
         int y = Character.getNumericValue(cell.charAt(1));
+        try {
+
         if (field[x][y] == null){
             field[x][y] = getNextAI();
+            throw new Exceptions("kuda");
             }else {
             System.out.println("engaged");
+        }
+        }catch (ArrayIndexOutOfBoundsException aiobe){
+            System.out.println("dude you suffered");
+        }catch (Exceptions exceptions){
+
         }
     }
 
