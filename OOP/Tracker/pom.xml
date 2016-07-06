@@ -7,9 +7,7 @@
     <artifactId>OOP</artifactId>
     <packaging>pom</packaging>
     <version>${version}</version>
-    <modules>
-        <module>../../</module>
-    </modules>
+    
 
     <parent>
         <artifactId>JavaDeveloper</artifactId>

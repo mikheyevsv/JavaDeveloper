@@ -21,7 +21,7 @@ public class Run {
      * Инициализация игры
      *
      */
-    public void init(Game game){
+    public void init(Game game) {
         int fieldSize = game.getFieldSize();
         do {
             if (game.getNextPlayer().getIsRobot()){
@@ -30,7 +30,7 @@ public class Run {
             }else {
                 game.makeMove(this.input.askUser("you go", fieldSize));
             }
-        }while (!game.isStep());
+        }while (!game.isNextStep());
         System.out.println("\n" +
                 "The end of everything");
     }

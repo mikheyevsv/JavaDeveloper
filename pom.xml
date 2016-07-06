@@ -12,7 +12,7 @@
         <module>BasicSyntax</module>
         <module>OOP/Tracker</module>
         <module>OOD/Tic-Tac</module>
-        <!--<module>P4_IO</module>-->
+        <module>OOD/Menu</module>
         <!--<module>P5_Collections</module>-->
         <!--<module>P4_IO</module>-->
     </modules>

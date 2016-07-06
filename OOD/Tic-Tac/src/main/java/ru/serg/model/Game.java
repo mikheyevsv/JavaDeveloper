@@ -1,11 +1,6 @@
 package ru.serg.model;
 
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-
 /**
  * @author Serg/
  * Класс создает игру.
@@ -113,15 +108,19 @@ public class Game {
      * Создаем игрока ЧЕЛОВЕК.
      */
 
-    public Player getNextPlayer(){
+    public Player getNextPlayer() {
+
         Player res = null;
-        for (int i = 0; i < this.humans.length; i++) {
-            if (this.humans[i] != null && this.humans[i].getAi().getIsActive()){
-                res = humans[i];
-                break;
+
+            for (int i = 0; i < this.humans.length; i++) {
+
+                if (this.humans[i] != null && this.humans[i].getAi().getIsActive()) {
+
+                    res = humans[i];
+                    break;
+                }
             }
-        }
-        return res;
+            return res;
     }
 
     /**
@@ -156,7 +155,7 @@ public class Game {
      * Ход игрока.
      */
 
-    public boolean isStep(){
+    public boolean isNextStep(){
         boolean res = isGameover();
         transitionProgress();
         return res;
@@ -167,16 +166,16 @@ public class Game {
      */
 
     public void makeMove(String cell){
-        int x = Character.getNumericValue(cell.charAt(0));
-        int y = Character.getNumericValue(cell.charAt(1));
         try {
+            int x = Character.getNumericValue(cell.charAt(0));
+            int y = Character.getNumericValue(cell.charAt(1));
 
         if (field[x][y] == null){
             field[x][y] = getNextAI();
             throw new Exceptions("kuda");
             }else {
             System.out.println("engaged");
-        }
+            }
         }catch (ArrayIndexOutOfBoundsException aiobe){
             System.out.println("dude you suffered");
         }catch (Exceptions exceptions){
@@ -188,11 +187,13 @@ public class Game {
      * Переход хода.
      */
 
-    private void transitionProgress(){
-        for (int i = 0; i <this.comp.length ; i++) {
-            if (this.comp[i] != null) {
-                this.comp[i].setActive(!this.comp[i].getIsActive());
-            }
+    private void transitionProgress() {
+
+            for (int i = 0; i < this.humans.length; i++) {
+                if (this.comp[i] != null) {
+
+                    this.comp[i].setActive(!this.humans[i].getIsRobot());///ebanaja huyja
+                }
         }
     }
 
