@@ -140,6 +140,7 @@ public class Game {
 
     /**
      * Устанавливаем игрока
+     * @param player
      */
 
     public void setPlayr(Player player){
@@ -188,14 +189,14 @@ public class Game {
      */
 
     private void transitionProgress() {
+            for (int i = 0; i < this.comp.length; i++) {
+                    if (this.comp[i] != null) {
+                        this.comp[i].setActive(!this.humans[i].getIsRobot());
+                    }
 
-            for (int i = 0; i < this.humans.length; i++) {
-                if (this.comp[i] != null) {
-
-                    this.comp[i].setActive(!this.humans[i].getIsRobot());///ebanaja huyja
-                }
-        }
+            }
     }
+
 
     /**
      * Проверка на конец игры.

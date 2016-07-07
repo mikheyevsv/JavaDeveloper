@@ -18,10 +18,10 @@ public class Console implements UserInput {
             try {
                     String nextLine = scanner.nextLine();
                     if (nextLine.length() != 2) {
-                        throw new Exceptions("going beyond the field");
+                        throw new Exceptions("going beyond the field1");
                     } else if (Character.getNumericValue(nextLine.charAt(0)) > fieldSize ||
                                Character.getNumericValue(nextLine.charAt(1)) > fieldSize) {
-                        throw new Exceptions("going beyond the field");
+                        throw new Exceptions("going beyond the field2");
                     } else {
                         Long.parseLong(nextLine);
                     }

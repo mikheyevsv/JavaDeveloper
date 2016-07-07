@@ -28,7 +28,7 @@ public class Run {
                 game.makeMove(game.getFreeCells());
                 game.printGameField();
             }else {
-                game.makeMove(this.input.askUser("you go", fieldSize));
+                game.makeMove(this.input.askUser("\n" + "you go", fieldSize));
             }
         }while (!game.isNextStep());
         System.out.println("\n" +
