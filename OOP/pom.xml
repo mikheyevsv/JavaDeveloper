@@ -8,7 +8,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>BasicSyntax</artifactId>
+    <artifactId>OOP-Tracer</artifactId>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -16,6 +16,4 @@
             <version>4.12</version>
         </dependency>
     </dependencies>
-
-
 </project>
