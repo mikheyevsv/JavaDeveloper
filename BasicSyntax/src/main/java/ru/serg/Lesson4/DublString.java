@@ -27,27 +27,3 @@ public class DublString {
     }
 }
 
-//        boolean[] isDubl = new boolean[str.length];
-//        for (int i = 0; i < str.length; i++);
-//
-//           for (int i = 0; i < str.length; i++) {
-//               if(!isDubl[i]){
-//                    String tmp = str[i];
-//
-//                    for (int j = i+1; j < str.length ; j++) {
-//                        if(tmp == str[j]){
-//                           isDubl[j] = true;
-//                           index++;
-//                      }
-//                   }
-//               }
-//            }
-//       String []result = new String[str.length - index];
-//       for (int i = 0, j = 0; i < str.length ; i++) {
-//           if(!isDubl[i]){
-//               result[j++] = str[i];
-//            }
-//        }
-       // return i;
-
-
