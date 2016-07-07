@@ -1,4 +1,4 @@
-package ru.serg.Lesson1.Compare;
+package ru.serg.Compare;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
-package ru.serg.Lesson1;
+package ru.serg;
 
-import ru.serg.Lesson1.Compare.ArrayMax;
+import ru.serg.Compare.ArrayMax;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

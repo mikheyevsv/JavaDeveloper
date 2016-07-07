@@ -1,4 +1,4 @@
-package ru.serg.Lesson1;
+package ru.serg;
 
 /**
  * Created by Serg on 08.02.2016.

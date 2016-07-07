@@ -1,4 +1,4 @@
-package ru.serg.Lesson1.Compare;
+package ru.serg.Compare;
 
 /**
  * Created by Serg on 12.02.2016.

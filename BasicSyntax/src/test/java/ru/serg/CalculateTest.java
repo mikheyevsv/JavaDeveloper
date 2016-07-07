@@ -1,4 +1,4 @@
-package ru.serg.Lesson1;
+package ru.serg;
 
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.*;
