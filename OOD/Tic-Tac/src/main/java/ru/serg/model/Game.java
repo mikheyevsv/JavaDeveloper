@@ -167,21 +167,16 @@ public class Game {
      */
 
     public void makeMove(String cell){
-        try {
+
             int x = Character.getNumericValue(cell.charAt(0));
             int y = Character.getNumericValue(cell.charAt(1));
 
         if (field[x][y] == null){
             field[x][y] = getNextAI();
-            throw new Exceptions("kuda");
-            }else {
-            System.out.println("engaged");
-            }
-        }catch (ArrayIndexOutOfBoundsException aiobe){
-            System.out.println("dude you suffered");
-        }catch (Exceptions exceptions){
 
-        }
+            }else {
+            System.out.println("is bussy");
+            }
     }
 
     /**
@@ -192,10 +187,7 @@ public class Game {
             for (int i = 0; i < this.comp.length; i++) {
                     if (this.comp[i] != null) {
                         this.comp[i].setActive(!this.comp[i].getIsActive());
-                    }else if(this.humans[i] ==null){
-                        this.comp[i].setActive(!this.humans[i].getIsRobot());
                     }
-
             }
     }
 
