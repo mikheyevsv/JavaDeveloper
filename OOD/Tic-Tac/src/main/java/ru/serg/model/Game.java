@@ -176,6 +176,7 @@ public class Game {
 
             }else {
             System.out.println("is bussy");
+
             }
     }
 
@@ -185,8 +186,11 @@ public class Game {
 
     private void transitionProgress() {
             for (int i = 0; i < this.comp.length; i++) {
-                    if (this.comp[i] != null) {
-                        this.comp[i].setActive(!this.comp[i].getIsActive());
+                    if (this.comp[i] == null) {
+                        this.comp[i].setActive(this.comp[i].getIsActive());
+
+                    }else if(this.humans[i] !=null){
+                        this.comp[i].setActive(!this.humans[i].getIsRobot());
                     }
             }
     }
