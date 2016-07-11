@@ -170,13 +170,16 @@ public class Game {
 
             int x = Character.getNumericValue(cell.charAt(0));
             int y = Character.getNumericValue(cell.charAt(1));
+            try {
+                if (field[x][y] == null) {
+                    field[x][y] = getNextAI();
 
-        if (field[x][y] == null){
-            field[x][y] = getNextAI();
+                } else {
+                    System.out.println("is bussy");
 
-            }else {
-            System.out.println("is bussy");
-
+                }
+            }catch (ArrayIndexOutOfBoundsException ae){
+                System.out.println("MNOGO");
             }
     }
 
@@ -184,12 +187,12 @@ public class Game {
      * Переход хода.
      */
 
-    private void transitionProgress() {
+    public void transitionProgress() {
             for (int i = 0; i < this.comp.length; i++) {
                     if (this.comp[i] == null) {
                         this.comp[i].setActive(this.comp[i].getIsActive());
 
-                    }else if(this.comp[i] !=null){
+                    }else if(this.humans[i] !=null){
                         this.comp[i].setActive(!this.humans[i].getIsRobot());
                     }
             }

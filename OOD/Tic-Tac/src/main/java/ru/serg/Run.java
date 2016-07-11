@@ -31,6 +31,7 @@ public class Run {
                 game.makeMove(this.input.askUser("\n" + "you go", fieldSize));
                 game.printGameField();
 
+
             }
         }while (!game.isNextStep());
         System.out.println("\n" +
