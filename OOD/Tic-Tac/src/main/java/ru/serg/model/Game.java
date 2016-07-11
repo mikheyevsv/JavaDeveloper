@@ -187,14 +187,20 @@ public class Game {
      * Переход хода.
      */
 
-    public void transitionProgress() {
+    private void transitionProgress() {
             for (int i = 0; i < this.comp.length; i++) {
                     if (this.comp[i] == null) {
-                        this.comp[i].setActive(this.comp[i].getIsActive());
+                        this.comp[i].setActive(!this.comp[i].getIsActive());
 
-                    }else if(this.humans[i] !=null){
+                    }
+                    else if(this.humans[i] != null){
                         this.comp[i].setActive(!this.humans[i].getIsRobot());
                     }
+//                    else if(this.comp[i] != null){
+//                    this.comp[i].setActive(this.comp[i].getIsActive());
+//                    }else {
+//                        System.out.println("zaebalo vsio");
+//                    }
             }
     }
 
