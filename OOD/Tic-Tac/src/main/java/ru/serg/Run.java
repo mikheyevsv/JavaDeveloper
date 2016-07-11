@@ -27,9 +27,11 @@ public class Run {
             if (game.getNextPlayer().getIsRobot()){
                 game.makeMove(game.getFreeCells());
                 game.printGameField();
-            }else {
+            }
+
+            else {
                 game.makeMove(this.input.askUser("\n" + "you go", fieldSize));
-                game.printGameField();
+game.printGameField();
             }
         }while (!game.isNextStep());
         System.out.println("\n" +
