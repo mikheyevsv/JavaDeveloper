@@ -205,7 +205,8 @@ public class Game {
 //                        System.out.println("zaebalo vsio");
 //                    }
 
-                } while (isPlayerWin());
+
+                } while (isGameover());
             }else //if(this.comp[i] == null)
             {
                     this.comp[i].setActive(this.comp[i].getIsActive());
