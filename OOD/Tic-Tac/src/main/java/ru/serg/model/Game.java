@@ -188,27 +188,29 @@ public class Game {
      */
 
     private void transitionProgress() {
-        do {
-            for (int i = 0; i < this.humans.length; i++) {
 
-                    //if () {
-                        this.comp[i].setActive(!this.comp[i].getIsActive());
-                if(this.humans[i] != null) {
+
+        for (int i = 0; i < this.comp.length; i++) {
+
+            if (this.humans[i] != null) {
+                do {
+                    //this.comp[i].setActive(this.comp[i].getIsActive());
+
+                    //}
+                    //if (this.humans[i] != null) {
                     this.comp[i].setActive(!this.humans[i].getIsRobot());
-                }
-                   // }
-//                    else if(this.humans[i] != null){
-//                        this.comp[i].setActive(!this.humans[i].getIsRobot());
-//                    }
-                }
-
+                    //}
 //
-//                    else if(this.comp[i] != null){
-//                    this.comp[i].setActive(this.comp[i].getIsActive());
 //                    }else {
 //                        System.out.println("zaebalo vsio");
 //                    }
-            }while (!true);
+
+                } while (isPlayerWin());
+            }else //if(this.comp[i] == null)
+            {
+                    this.comp[i].setActive(this.comp[i].getIsActive());
+            }
+        }
     }
 
 
