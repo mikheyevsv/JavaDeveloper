@@ -193,26 +193,15 @@ public class Game {
         for (int i = 0; i < this.comp.length; i++) {
 
             if (this.humans[i] != null) {
-                do {
-                    //this.comp[i].setActive(this.comp[i].getIsActive());
-
-                    //}
-                    //if (this.humans[i] != null) {
+                    this.comp[i].setActive(!this.comp[i].getIsActive());
+                    }
+                   else if (this.humans[i] != null) {
                     this.comp[i].setActive(!this.humans[i].getIsRobot());
-                    //}
-//
-//                    }else {
-//                        System.out.println("zaebalo vsio");
-//                    }
+                    }
 
-
-                } while (isGameover());
-            }else //if(this.comp[i] == null)
-            {
-                    this.comp[i].setActive(this.comp[i].getIsActive());
             }
-        }
     }
+
 
 
     /**
