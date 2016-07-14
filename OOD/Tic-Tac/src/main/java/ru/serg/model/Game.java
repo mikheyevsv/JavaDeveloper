@@ -192,7 +192,7 @@ public class Game {
 
         for (int i = 0; i < this.comp.length; i++) {
 
-            if (this.humans[i] != null) {
+            if (this.humans[i] == null) {
                     this.comp[i].setActive(!this.comp[i].getIsActive());
                     }
                    else if (this.humans[i] != null) {
