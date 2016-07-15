@@ -19,7 +19,7 @@ public class WinnerTest {
     }
     @Test
     public void whenAllValuesNotAre() throws Exception {
-        
+
         boolean res = win.isRavno( new int [] {1,0,1,1});
         assertThat(false, is(equalTo(res)));
     }
