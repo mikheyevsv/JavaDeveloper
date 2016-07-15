@@ -189,8 +189,6 @@ public class Game {
                     if (this.comp[i] == null) {
                         this.comp[i].setActive(this.comp[i].getIsActive());
 
-                    }else if(this.comp[i] !=null){
-                        this.comp[i].setActive(!this.humans[i].getIsRobot());
                     }
             }
     }
