@@ -31,7 +31,9 @@ public class Console implements UserInput {
                 }catch (Exceptions exc){
                 System.out.println(exc.getMassage() + question);
              }
+            scanner.close();
         }
+
     }
 }
 

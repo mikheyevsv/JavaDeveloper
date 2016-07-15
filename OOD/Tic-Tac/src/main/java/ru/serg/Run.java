@@ -27,12 +27,22 @@ public class Run {
             if (game.getNextPlayer().getIsRobot()){
                 game.makeMove(game.getFreeCells());
                 game.printGameField();
+<<<<<<< HEAD
             }else {
                 game.makeMove(this.input.askUser("\n" + "you go", fieldSize));
 
 
             }
 
+=======
+
+            }
+
+            else {
+                game.makeMove(this.input.askUser("\n" + "you go", fieldSize));
+game.printGameField();
+            }
+>>>>>>> bddba928d0a6a2fc447c492e216f28772b0e226a
         }while (!game.isNextStep());
         System.out.println("\n" +
                 "The end of everything");

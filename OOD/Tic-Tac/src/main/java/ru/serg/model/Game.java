@@ -170,13 +170,16 @@ public class Game {
 
             int x = Character.getNumericValue(cell.charAt(0));
             int y = Character.getNumericValue(cell.charAt(1));
+            try {
+                if (field[x][y] == null) {
+                    field[x][y] = getNextAI();
 
-        if (field[x][y] == null){
-            field[x][y] = getNextAI();
+                } else {
+                    System.out.println("is bussy");
 
-            }else {
-            System.out.println("is bussy");
-
+                }
+            }catch (ArrayIndexOutOfBoundsException ae){
+                System.out.println("MNOGO");
             }
     }
 
@@ -185,13 +188,27 @@ public class Game {
      */
 
     private void transitionProgress() {
-            for (int i = 0; i < this.comp.length; i++) {
-                    if (this.comp[i] == null) {
-                        this.comp[i].setActive(this.comp[i].getIsActive());
+        boolean isTurned = false;
 
+        do {
+            for (int i = 0; i < this.comp.length; i++) {
+
+<<<<<<< HEAD
                     }
+=======
+                if (this.humans[i] != null) {
+                    this.comp[i].setActive(!this.humans[i].getIsRobot());
+                    isTurned = true;
+                }
+// else if (this.humans[i] != null) {
+//                    this.comp[i].setActive(!this.humans[i].getIsRobot());
+//                }
+
+>>>>>>> bddba928d0a6a2fc447c492e216f28772b0e226a
             }
+        }while (!isTurned);
     }
+
 
 
     /**

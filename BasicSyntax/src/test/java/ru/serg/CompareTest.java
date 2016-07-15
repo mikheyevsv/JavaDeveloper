@@ -15,7 +15,7 @@ public class CompareTest {
 //       int size = 5;
         ArrayMax arrayMax = new ArrayMax();
         int[] first = arrayMax.generate(5);
-        int[] second = arrayMax.generate(6);
+        int[] second = arrayMax.generate(4);
         boolean unic = false;
         for (int i = 0; i <5; i++) {
             if(first[i] != second[i]){
