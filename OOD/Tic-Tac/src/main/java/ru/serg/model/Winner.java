@@ -7,16 +7,24 @@ import java.util.Arrays;
  */
 public class Winner {
 
-    int []arr = {1,1,1,1};
-    public boolean isRavno(int[] arr){
-        for (int i = 0; i < arr.length ; i++) {
-            if (arr[i] == arr[i+1]){
-                return true;
 
-            }
-        }
-        return false;
+    public static void main(String[] args) {
+
+        Winner win = new Winner();
+        System.out.println(win.isRavno(new int[]{1, 1, 0,1,1,1,1}));
+
     }
 
+    public  boolean isRavno(int [] array){
 
+        for (int i = 0; i < array.length ; i++) {
+            int temp = array[i];
+
+            for (int j = 1; j < array.length ; j++) {
+                if (array[j] != temp){
+                return false;
+                }
+            }
+        }return true;
+    }
 }
