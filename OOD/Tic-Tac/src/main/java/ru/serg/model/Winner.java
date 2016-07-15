@@ -11,7 +11,7 @@ public class Winner {
     public static void main(String[] args) {
 
         Winner win = new Winner();
-        System.out.println(win.isRavno(new int[]{1, 1, 0,1,1,1,1}));
+        System.out.println(win.isRavno(new int[]{1, 1, 1,1,1,1,1}));
 
     }
 
