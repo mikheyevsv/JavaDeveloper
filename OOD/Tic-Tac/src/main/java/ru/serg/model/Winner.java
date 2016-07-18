@@ -17,14 +17,11 @@ public class Winner {
 
     public  boolean isRavno(int [] array){
 
-        for (int i = 0; i < array.length ; i++) {
-            int temp = array[i];
-
-            for (int j = 1; j < array.length ; j++) {
-                if (array[j] != temp){
+        for (int i = 0; i < array.length -1 ; i++) {
+            if (array[i] != array[i+1]){
                 return false;
-                }
             }
         }return true;
     }
 }
+
