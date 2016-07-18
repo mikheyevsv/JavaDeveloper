@@ -29,4 +29,10 @@ public class WinnerTest {
         assertThat(true, is(equalTo(res)));
     }
 
+    @Test
+    public void whenTwoConsecutiveUnits() throws Exception {
+
+        boolean res = win.whenThreeConsecutiveUnits( new int [] {1,1});
+        assertThat(true, is(equalTo(res)));
+    }
 }

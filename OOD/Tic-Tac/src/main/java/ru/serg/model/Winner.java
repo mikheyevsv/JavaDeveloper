@@ -12,13 +12,14 @@ public class Winner {
 
         Winner win = new Winner();
         //System.out.println(win.isRavno(new int[]{1, 1, 1,1,1,1,1}));
-        System.out.println(win.whenThreeConsecutiveUnits(new int[]{1, 1, 1}));
+        //System.out.println(win.whenThreeConsecutiveUnits(new int[]{1, 1, 1}));
+        System.out.println(win.whenTwoConsecutiveUnits(new int[]{, 1}));
 
     }
 
     public  boolean isRavno(int [] array){
 
-        for (int i = 0; i < array.length -1 ; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             if (array[i] != array[i+1]){
                 return false;
             }
@@ -33,6 +34,15 @@ public class Winner {
                 }
             }
         }return true;
+    }
+
+    public boolean whenTwoConsecutiveUnits(int [] array){
+        for (int i = 0; i <array.length - 1; i++) {
+            if(array[i] == array[i + 1]){
+                return true;
+            }
+        }
+        return false;
     }
 }
 
