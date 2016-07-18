@@ -13,7 +13,7 @@ public class Winner {
         Winner win = new Winner();
         //System.out.println(win.isRavno(new int[]{1, 1, 1,1,1,1,1}));
         //System.out.println(win.whenThreeConsecutiveUnits(new int[]{1, 1, 1}));
-        System.out.println(win.whenTwoConsecutiveUnits(new int[]{, 1}));
+        System.out.println(win.whenTwoConsecutiveUnits(new int[]{0, 0}));
 
     }
 

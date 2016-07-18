@@ -35,4 +35,6 @@ public class WinnerTest {
         boolean res = win.whenThreeConsecutiveUnits( new int [] {1,1});
         assertThat(true, is(equalTo(res)));
     }
+
+
 }
