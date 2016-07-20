@@ -16,19 +16,23 @@ public class IntegerValues {
         return reader.readLine();
     }
 
-    public void close() throws IOException {
-        reader.close();
-    }
+
 
     public double proverka(double value) throws IOException {
-
-            if (value % 1 == 0){
+        try {
+            if (value % 1 == 0) {
                 System.out.println("Integer");
-            }else {
+            } else {
                 System.out.println("not integer");
             }
-        return value;
+        } catch (NumberFormatException nfe) {
+            System.out.println("For  string");
+        } finally {
+            reader.close();
+        }return value;
     }
+
+
 
 
     public double input (String value){
@@ -40,7 +44,7 @@ public class IntegerValues {
 
         double value = iv.input(iv.ask());
         iv.proverka(value);
-        iv.close();
+
     }
 
 }
