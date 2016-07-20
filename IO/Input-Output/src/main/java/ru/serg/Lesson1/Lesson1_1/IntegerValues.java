@@ -1,4 +1,4 @@
-package ru.serg.Lesson1;
+package ru.serg.Lesson1.Lesson1_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

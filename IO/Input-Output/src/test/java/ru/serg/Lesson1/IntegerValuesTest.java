@@ -1,6 +1,8 @@
 package ru.serg.Lesson1;
 
 import org.junit.Test;
+import ru.serg.Lesson1.Lesson1_1.IntegerValues;
+
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
