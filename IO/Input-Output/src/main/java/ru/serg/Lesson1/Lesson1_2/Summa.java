@@ -47,7 +47,6 @@ public class Summa {
             summa.summ(val1, val2);
             summa.close();
         } catch (NumberFormatException nfe) {
-            System.out.println(nfe.getMessage());
             System.err.println("Please enter integer value");
         }
     }
