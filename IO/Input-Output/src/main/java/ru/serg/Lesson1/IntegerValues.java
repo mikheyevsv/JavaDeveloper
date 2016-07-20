@@ -9,10 +9,15 @@ import java.io.InputStreamReader;
  */
 public class IntegerValues {
 
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
     public  String ask() throws IOException {
         System.out.println("Enter value");
-       BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-       return reader.readLine();
+        return reader.readLine();
+    }
+
+    public void close() throws IOException {
+        reader.close();
     }
 
     public double proverka(double value) throws IOException {
@@ -35,6 +40,7 @@ public class IntegerValues {
 
         double value = iv.input(iv.ask());
         iv.proverka(value);
+        iv.close();
     }
 
 }
