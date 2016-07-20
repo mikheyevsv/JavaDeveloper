@@ -32,13 +32,20 @@ public class Summa {
         System.out.println("Summa = " + sum);
 
     }
-
+    public void close(){
+        try {
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public static void main(String[] args) throws IOException {
         Summa summa = new Summa();
         try {
             double val1 = summa.input(summa.askOne());
             double val2 = summa.input(summa.askTwo());
             summa.summ(val1, val2);
+            summa.close();
         } catch (NumberFormatException nfe) {
             System.out.println(nfe.getMessage());
             System.err.println("Please enter integer value");
