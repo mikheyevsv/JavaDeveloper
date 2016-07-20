@@ -10,26 +10,38 @@ import java.io.InputStreamReader;
 public class Summa {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-
-    public  String ask() throws IOException {
-        System.out.println("Enter value");
+    public String askOne() throws IOException {
+        System.out.println("Enter first value");
         return reader.readLine();
     }
 
-    public double input (String value){
+    public String askTwo() throws IOException {
+        System.out.println("Enter second value");
+        return reader.readLine();
+    }
+
+
+    public double input(String value) {
         return Double.parseDouble(value);
     }
 
 
-    public double summ(double x, double y){
-        return x +y;
+    public void summ(double x, double y) {
+
+        double sum = x + y;
+        System.out.println("Summa = " + sum);
+
     }
 
     public static void main(String[] args) throws IOException {
         Summa summa = new Summa();
-
-        double val1 = summa.input(summa.ask());
-        double val2 = summa.input(summa.ask());
-        summa.summ(val1, val2);
+        try {
+            double val1 = summa.input(summa.askOne());
+            double val2 = summa.input(summa.askTwo());
+            summa.summ(val1, val2);
+        } catch (NumberFormatException nfe) {
+            System.out.println(nfe.getMessage());
+            System.err.println("Please enter integer value");
+        }
     }
 }
