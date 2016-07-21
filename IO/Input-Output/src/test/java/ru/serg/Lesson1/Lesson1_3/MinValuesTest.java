@@ -16,7 +16,7 @@ public class MinValuesTest {
         min = new MinValues();
     }
 
-    
+
     @Test
     public void minValuesTest() throws Exception {
         double res = min.minValues(1d, 2d, 3d);
