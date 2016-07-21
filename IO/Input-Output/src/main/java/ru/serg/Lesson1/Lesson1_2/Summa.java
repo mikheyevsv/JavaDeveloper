@@ -26,12 +26,14 @@ public class Summa {
     }
 
 
-    public void summ(double x, double y) {
+    public double summ(double x, double y) {
 
         double sum = x + y;
         System.out.println("Summa = " + sum);
-
+        return sum;
     }
+
+
     public void close(){
         try {
             reader.close();
@@ -39,6 +41,8 @@ public class Summa {
             e.printStackTrace();
         }
     }
+
+    
     public static void main(String[] args) throws IOException {
         Summa summa = new Summa();
         try {

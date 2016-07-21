@@ -13,10 +13,7 @@ public class SummaTest {
 
     @Test
     public void summ() throws Exception {
-        double val1 = 1d;
-        double val2 = 2d;
-          // res = summa.summ(val1,val2);
-        //assertThat(3d, is(equalTo(res)));
+        double res = summa.summ(1d, 2d);
+        assertThat(3d, is(equalTo(res)));
     }
-
 }
