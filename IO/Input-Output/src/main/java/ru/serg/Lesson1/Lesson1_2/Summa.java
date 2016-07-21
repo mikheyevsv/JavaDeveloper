@@ -42,7 +42,7 @@ public class Summa {
         }
     }
 
-    
+
     public static void main(String[] args) throws IOException {
         Summa summa = new Summa();
         try {
