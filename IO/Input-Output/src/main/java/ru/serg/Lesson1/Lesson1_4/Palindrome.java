@@ -51,7 +51,7 @@ public class Palindrome {
         if (word.length() == 5){
             System.out.println(palindrome.isPalindrome(word));
         }else {
-            System.err.println("Well, all the guys came");
+            System.out.println("Well, all the guys came");
         }
             palindrome.close();
 
