@@ -12,13 +12,14 @@ public class Palindrome {
 
     private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    public String askOne() throws IOException {
-        System.out.println("Enter a word");
-        return reader.readLine();
-    }
-
-    public String input(String value) {
-        return String.format(value);
+    public String input()throws IOException {
+        String line = "";
+        try {
+            line = reader.readLine();
+        }catch (IOException e){
+            System.out.println("wrong text");
+        }
+        return line;
     }
 
     private void close(){
@@ -31,7 +32,7 @@ public class Palindrome {
 
     public String reverse(String string){
         String res = "";
-        for (int i = string.length() -1; i >= 0 ; i--) {
+        for (int i = string.length() - 1; i >= 0 ; i--) {
              res += (char)string.charAt(i);
         }
         return res;
@@ -44,14 +45,16 @@ public class Palindrome {
 
     public static void main(String[] args) throws IOException {
         Palindrome palindrome = new Palindrome();
+        System.out.println("Enter a word");
 
-        try {
-            String val = palindrome.input(palindrome.askOne());
-            palindrome.isPalindrome(val);
+        String word = palindrome.input();
+        if (word.length() == 5){
+            System.out.println(palindrome.isPalindrome(word));
+        }else {
+            System.err.println("Well, all the guys came");
+        }
             palindrome.close();
 
-        }catch (NumberFormatException nfe){
-            System.out.println("Not a String");
-        }
+
     }
 }
