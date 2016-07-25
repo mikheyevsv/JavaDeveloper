@@ -1,30 +1,33 @@
 package ru.serg.Lesson1.Lesson1_5;
 
 import org.apache.log4j.Logger;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Created by Serg on 25.07.2016.
  */
 public class Chat {
+
     private static final Logger log = Logger.getLogger(Chat.class);
+    private static final String STOP = "stop";
+    private static final String END = "end";
+    private static final String CONTINUE = "continue";
+    private static final String PHRASE = "D:\\JavaDeveloper\\IO\\Input-Output\\src\\main\\resources\\phrase.txt";
+    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public void doOrder(){
-        // какае-то логика
-        System.out.println("Заказ оформлен!");
-        // логируем инфо
-        log.info("Это информационное сообщение!");
-        addToCart();
-    }
 
-    private void addToCart() {
-        // добавление товара в корзину
-        System.out.println("Товар добавлен в корзину");
-        // логируем ошибку
-        log.error("Это сообщение ошибки");
+    private void close(){
+        try {
+            br.close();
+        } catch (IOException e) {
+            log.error("Something failed", e);
+        }log.info("Stream is closeg");
     }
 
     public static void main(String[] args) {
-        Chat chat = new Chat();
-        chat.doOrder();
+        Chat cat = new Chat();
+        cat.close();
     }
 }
