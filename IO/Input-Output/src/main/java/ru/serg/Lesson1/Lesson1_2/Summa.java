@@ -29,7 +29,7 @@ public class Summa {
     public double summ(double x, double y) {
 
         double sum = x + y;
-        System.out.println("Summa = " + sum);
+        System.out.println(String.format("Summa %s", sum));
         return sum;
     }
 
