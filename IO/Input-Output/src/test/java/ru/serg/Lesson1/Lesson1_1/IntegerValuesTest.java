@@ -21,8 +21,8 @@ public class IntegerValuesTest {
 
     @Test
     public void proverka() throws Exception {
-        double res = iv.proverka(2d);
-        assertThat(2d, is(equalTo(res)));
+        int res = iv.proverka(2);
+        assertThat(2, is(equalTo(res)));
 
     }
 

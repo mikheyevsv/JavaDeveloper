@@ -20,24 +20,25 @@ public class IntegerValues {
         reader.close();
     }
 
-    public double proverka(double value) throws IOException {
+    public int proverka(int value) throws IOException {
+
             if (value % 1 == 0) {
-                System.out.println("Integer");
+                System.out.println(String.format("Integer %s", value));
             } else {
-                System.out.println("not integer");
+                System.out.println(String.format("Not integer %s", value));
             }
         return value;
     }
 
 
     public double input (String value){
-        return Double.parseDouble(value);
+        return Integer.parseInt(value);
     }
 
     public static void main(String[] args) throws IOException {
         IntegerValues iv = new IntegerValues();
         try {
-            double value = iv.input(iv.ask());
+            int value = (int) iv.input(iv.ask());
             iv.proverka(value);
             iv.close();
         }catch (NumberFormatException nfe){

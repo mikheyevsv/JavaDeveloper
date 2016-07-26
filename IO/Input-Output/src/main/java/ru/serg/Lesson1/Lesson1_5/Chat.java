@@ -11,11 +11,13 @@ import java.io.InputStreamReader;
 public class Chat {
 
     private static final Logger log = Logger.getLogger(Chat.class);
+    private static final String LOG_PROPERTIES_FILE = "d:\\JavaDeveloper\\IO\\Input-Output\\src\\main\\resources\\log4j.properties";
     private static final String STOP = "stop";
     private static final String END = "end";
     private static final String CONTINUE = "continue";
     private static final String PHRASE = "D:\\JavaDeveloper\\IO\\Input-Output\\src\\main\\resources\\phrase.txt";
     private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 
 
     private void close(){
@@ -27,6 +29,8 @@ public class Chat {
     }
 
     public static void main(String[] args) {
+        ConfigLog configLog = new ConfigLog(LOG_PROPERTIES_FILE);
+        configLog.init();
         Chat cat = new Chat();
         cat.close();
     }
