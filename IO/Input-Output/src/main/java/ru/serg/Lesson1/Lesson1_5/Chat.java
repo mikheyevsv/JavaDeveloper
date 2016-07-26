@@ -1,6 +1,9 @@
 package ru.serg.Lesson1.Lesson1_5;
 
 import org.apache.log4j.Logger;
+import ru.serg.Lesson1.Lesson1_5.Configure.ConfigLog;
+import ru.serg.Lesson1.Lesson1_5.Configure.Resourses;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,13 +14,12 @@ import java.io.InputStreamReader;
 public class Chat {
 
     private static final Logger log = Logger.getLogger(Chat.class);
-    private static final String LOG_PROPERTIES_FILE = "d:\\JavaDeveloper\\IO\\Input-Output\\src\\main\\resources\\log4j.properties";
-    private static final String STOP = "stop";
-    private static final String END = "end";
-    private static final String CONTINUE = "continue";
-    private static final String PHRASE = "D:\\JavaDeveloper\\IO\\Input-Output\\src\\main\\resources\\phrase.txt";
+    private static final String LOG_PROPERTIES_FILE = Resourses.Log.LOG_PROPERTIES_FILE;
+    private static final String STOP = Resourses.GlobalValues.STOP;
+    private static final String END = Resourses.GlobalValues.END;
+    private static final String CONTINUE = Resourses.GlobalValues.CONTINUE;
+    private static final String PHRASE = Resourses.GlobalValues.PHRASE;
     private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
 
 
     private void close(){

@@ -1,4 +1,4 @@
-package ru.serg.Lesson1.Lesson1_5;
+package ru.serg.Lesson1.Lesson1_5.Configure;
 
 import org.apache.log4j.PropertyConfigurator;
 
