@@ -39,9 +39,11 @@ public class Chat {
     public void startProgram() throws IOException {
         String message;
         FileWriter writer = new FileWriter(CHATLOG, true);
+        FileOutputStream outputStream = new FileOutputStream(CHATLOG);
         send.fill();
         while (!stop){
             message = receive.read();
+            outputStream.write(message.getBytes());
             writer.write(message + "\n");
             checkMassage(message);
             if (!stopChat){
@@ -49,6 +51,7 @@ public class Chat {
             }
         }
         receive.close();
+        outputStream.close();
         writer.flush();
         writer.close();
     }
