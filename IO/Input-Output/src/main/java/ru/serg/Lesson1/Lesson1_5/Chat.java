@@ -38,23 +38,19 @@ public class Chat {
 
     public void startProgram() throws IOException {
         String message;
-        File writer = new File(CHATLOG);
-        PrintWriter out = new PrintWriter(writer.getAbsoluteFile());
-        if (!writer.exists()){
-            writer.createNewFile();
-        }
+        FileWriter writer = new FileWriter(CHATLOG, true);
         send.fill();
         while (!stop){
             message = receive.read();
-            out.print(message + "\n");
+            writer.write(message + "\n");
             checkMassage(message);
             if (!stopChat){
-                out.write(send.generator());
+                writer.write(send.generator());
             }
         }
         receive.close();
-        out.flush();
-        out.close();
+        writer.flush();
+        writer.close();
     }
 
 

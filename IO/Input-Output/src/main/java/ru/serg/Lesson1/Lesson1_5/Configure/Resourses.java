@@ -23,7 +23,7 @@ public class Resourses {
         public static final String END = "end";
         public static final String CONTINUE = "continue";
         public static final String PHRASE = "D:\\JavaDeveloper\\IO\\Input-Output\\src\\main\\resources\\phrase.txt";
-        public static final String CHATLOG = "D:\\JavaDeveloper\\IO\\Input-Output\\src/\\main\\resources\\chatlog.txt";
+        public static final String CHATLOG = "D:\\JavaDeveloper\\IO\\Input-Output\\chatlog.log";
     }
 
 }
