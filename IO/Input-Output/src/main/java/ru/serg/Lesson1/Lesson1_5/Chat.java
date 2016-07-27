@@ -73,7 +73,7 @@ public class Chat {
         try {
             cat.startProgram();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("The programm is not started", e);
         }
 
     }
