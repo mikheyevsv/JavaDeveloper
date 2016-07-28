@@ -24,7 +24,7 @@ public class Operations {
      */
 
     private HashMap<String, Computing> initialise(){
-        HashMap<String, Computing> operator = new HashMap<String, Computing>();
+        HashMap<String, Computing> operator = new HashMap<>();
         operator.put("+", (valueOne, valueTwo) -> valueOne + valueTwo);
         operator.put("-", (valueOne, valueTwo) -> valueOne - valueTwo);
         operator.put("*", (valueOne, valueTwo) -> valueOne * valueTwo);
