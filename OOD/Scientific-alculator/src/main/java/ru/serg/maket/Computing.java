@@ -5,7 +5,7 @@ package ru.serg.maket;
 /**@author Serg
  * This interfase creating a Computing.
  */
-
+@FunctionalInterface
 public interface Computing {
 
     /**
