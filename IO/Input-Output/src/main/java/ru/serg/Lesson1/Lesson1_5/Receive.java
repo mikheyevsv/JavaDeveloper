@@ -1,7 +1,6 @@
-package ru.serg.Lesson1.Lesson1_5.Configure;
+package ru.serg.Lesson1.Lesson1_5;
 
 import org.apache.log4j.Logger;
-import ru.serg.Lesson1.Lesson1_5.Chat;
 
 import java.io.BufferedReader;
 import java.io.IOException;

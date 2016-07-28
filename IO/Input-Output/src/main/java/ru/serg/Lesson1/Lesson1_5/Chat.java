@@ -2,7 +2,6 @@ package ru.serg.Lesson1.Lesson1_5;
 
 import org.apache.log4j.Logger;
 import ru.serg.Lesson1.Lesson1_5.Configure.ConfigLog;
-import ru.serg.Lesson1.Lesson1_5.Configure.Receive;
 import ru.serg.Lesson1.Lesson1_5.Configure.Resourses;
 
 import java.io.*;
