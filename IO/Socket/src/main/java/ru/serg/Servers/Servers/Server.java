@@ -39,7 +39,7 @@ public class Server {
 
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            
+
 
         }catch (IOException ie){
             log.error("Chto-to poshlo ne tak", ie);
