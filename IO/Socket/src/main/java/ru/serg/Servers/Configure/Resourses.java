@@ -20,6 +20,7 @@ public class Resourses {
 
     public static class GlobalValues{
         public static final int PORT = 5000;
+        public static final String IP_ADRESS = "127.0.0.1";
         public static final String STOP = "stop";
         public static final String END = "end";
         public static final String CONTINUE = "continue";
