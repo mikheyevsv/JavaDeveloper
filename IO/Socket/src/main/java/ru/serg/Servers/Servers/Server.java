@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.CharBuffer;
+
 
 import static ru.serg.Servers.Configure.Resourses.Log.LOG_PROPERTIES_FILE;
 
@@ -28,21 +28,29 @@ public class Server {
         server.createSocket();
     }
 
-    public void createSocket(){
-        try{
+    public void createSocket() {
+        try {
             ServerSocket serverSocket = new ServerSocket(PORT);
             System.out.println("I expect a response from the server");
 
-            Socket socket = serverSocket.accept();
+            Socket clientSocket = serverSocket.accept();
             log.warn("the connection is  not established");
             System.out.println("the connection is established");
 
-            PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            PrintWriter out =
+                    new PrintWriter(clientSocket.getOutputStream(), true);
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(clientSocket.getInputStream()));
 
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                out.println(inputLine);
+            }
+            out.close();
+            in.close();
+        } catch (IOException e) {
+            log.error("Chto-to poshlo ne tak", e);
 
-        }catch (IOException ie){
-            log.error("Chto-to poshlo ne tak", ie);
         }
     }
 }
