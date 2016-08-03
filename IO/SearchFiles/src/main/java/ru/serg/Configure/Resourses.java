@@ -14,5 +14,5 @@ public class Resourses {
         public static final String LOG_PROPERTIES_FILE = "d:\\JavaDeveloper\\IO\\Socket\\src\\main\\resources\\log4j.properties";
     }
 
-    
+
 }
