@@ -1,6 +1,6 @@
 package ru.serg.moduls;
 
-import ru.serg.calculatingOperation.*;
+
 import ru.serg.maket.Computing;
 
 import java.util.HashMap;
@@ -24,12 +24,11 @@ public class Operations {
      */
 
     private HashMap<String, Computing> initialise(){
-        HashMap<String, Computing> operator = new HashMap<String, Computing>();
-        operator.put("+", new Addition());
-        operator.put("-", new Subtraction());
-        operator.put("*", new Multiplication());
-        operator.put("/", new Division());
-        operator.put("^", new DataLevel());
+        HashMap<String, Computing> operator = new HashMap<>();
+        operator.put("+", (valueOne, valueTwo) -> valueOne + valueTwo);
+        operator.put("-", (valueOne, valueTwo) -> valueOne - valueTwo);
+        operator.put("*", (valueOne, valueTwo) -> valueOne * valueTwo);
+        operator.put("/", (valueOne, valueTwo) -> valueOne / valueTwo);
         return operator;
     }
 

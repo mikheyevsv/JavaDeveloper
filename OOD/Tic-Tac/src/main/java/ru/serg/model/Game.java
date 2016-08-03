@@ -188,26 +188,24 @@ public class Game {
      */
 
     private void transitionProgress() {
-        boolean isTurned = false;
 
-        do {
             for (int i = 0; i < this.comp.length; i++) {
 
-<<<<<<< HEAD
-                    }
-=======
+
+
+
                 if (this.humans[i] != null) {
                     this.comp[i].setActive(!this.humans[i].getIsRobot());
-                    isTurned = true;
+
                 }
 // else if (this.humans[i] != null) {
 //                    this.comp[i].setActive(!this.humans[i].getIsRobot());
 //                }
 
->>>>>>> bddba928d0a6a2fc447c492e216f28772b0e226a
+
             }
-        }while (!isTurned);
-    }
+        }
+
 
 
 

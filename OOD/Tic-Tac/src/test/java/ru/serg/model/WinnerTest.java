@@ -1,8 +1,6 @@
 package ru.serg.model;
 
 import org.junit.Test;
-
-
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
@@ -23,5 +21,20 @@ public class WinnerTest {
         boolean res = win.isRavno( new int [] {1,0,1,1});
         assertThat(false, is(equalTo(res)));
     }
+
+    @Test
+    public void whenThreeConsecutiveUnits() throws Exception {
+
+        boolean res = win.whenThreeConsecutiveUnits( new int [] {1,1,1});
+        assertThat(true, is(equalTo(res)));
+    }
+
+    @Test
+    public void whenTwoConsecutiveUnits() throws Exception {
+
+        boolean res = win.whenThreeConsecutiveUnits( new int [] {1,1});
+        assertThat(true, is(equalTo(res)));
+    }
+
 
 }
