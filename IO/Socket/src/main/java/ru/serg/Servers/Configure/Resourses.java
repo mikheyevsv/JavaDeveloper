@@ -24,8 +24,8 @@ public class Resourses {
         public static final String STOP = "stop";
         public static final String END = "end";
         public static final String CONTINUE = "continue";
-        public static final String PHRASE = "D:\\JavaDeveloper\\IO\\Socket\\src\\main\\resources\\phrase.txt";
-        public static final String CHATLOG = "D:\\JavaDeveloper\\IO\\Socket\\chatlog.log";
+        public static final String PHRASE = "JavaDeveloper/IO/Socket/src/main/resources/phrase.txt";
+        public static final String CHATLOG = "JavaDeveloper/IO/Socket/chatlog.log";
     }
 
 }
