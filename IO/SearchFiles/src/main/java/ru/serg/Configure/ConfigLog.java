@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by Serg on 26.07.2016.
+ * @author Sergey Miheev
+ * @version 1.0
  */
 public class ConfigLog {
     private static Properties logProperties = new Properties();

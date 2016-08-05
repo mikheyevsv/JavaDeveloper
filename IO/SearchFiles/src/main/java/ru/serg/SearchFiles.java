@@ -2,7 +2,8 @@ package ru.serg;
 
 
 /**
- * Created by Serg on 03.08.2016.
+ * @author Sergey Miheev
+ * @version 1.0
  */
 public class SearchFiles {
 

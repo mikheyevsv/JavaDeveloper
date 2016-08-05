@@ -5,9 +5,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author Serg
+ * @author Sergey Miheev
+ * @version 1.0
  */
-public class SearchByRegularExpression implements Chek {
+public class SearchByRegularExpression implements Check {
+
+    /**
+     *
+     * @param file
+     * @param param check regular expression
+     * @return
+     * @see Check
+     */
 
     @Override
     public boolean chek(File file, String param) {

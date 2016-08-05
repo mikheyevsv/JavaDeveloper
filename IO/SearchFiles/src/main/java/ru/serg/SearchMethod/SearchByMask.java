@@ -6,9 +6,19 @@ import java.nio.file.PathMatcher;
 import java.nio.file.Paths;
 
 /**
- * Created by Serg on 05.08.2016.
+ * @author Sergey Miheev
+ * @version 1.0
  */
-public class SearchByMask implements Chek {
+public class SearchByMask implements Check {
+
+    /**
+     *
+     * @param file width check
+     * @param param check file mask
+     * @return
+     * @see Check
+     */
+
     @Override
     public boolean chek(File file, String param) {
         PathMatcher matcher = FileSystems.getDefault().getPathMatcher(String.format("Global %s", param));
