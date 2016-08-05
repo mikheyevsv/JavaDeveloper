@@ -11,7 +11,7 @@ public class Resourses {
      */
 
     public static class Log{
-        public static final String LOG_PROPERTIES_FILE = "d:\\JavaDeveloper\\IO\\Socket\\src\\main\\resources\\log4j.properties";
+        public static final String LOG_PROPERTIES_FILE = "d://JavaDeveloper//IO//Socket//src//main//resources//log4j.properties";
     }
 
     /**
