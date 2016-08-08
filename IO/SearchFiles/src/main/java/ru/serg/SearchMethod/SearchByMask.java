@@ -9,15 +9,15 @@ import java.nio.file.Paths;
  * @author Sergey Miheev
  * @version 1.0
  */
-public class SearchByMask implements Check {
+public class SearchByMask extends SearchByFileName{
 
     /**
      *
      * @param file width check
      * @param param check file mask
      * @return
-     * @see Check
-     */
+     *
+    */
 
     @Override
     public boolean chek(File file, String param) {

@@ -8,14 +8,14 @@ import java.util.regex.Pattern;
  * @author Sergey Miheev
  * @version 1.0
  */
-public class SearchByRegularExpression implements Check {
+public class SearchByRegularExpression extends SearchByFileName{
 
     /**
      *
      * @param file
      * @param param check regular expression
      * @return
-     * @see Check
+     *
      */
 
     @Override
