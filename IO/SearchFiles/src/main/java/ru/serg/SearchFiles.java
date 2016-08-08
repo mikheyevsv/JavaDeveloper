@@ -10,7 +10,7 @@ import ru.serg.SearchMethod.SearchByRegularExpression;
  * @version 1.0
  */
 public class SearchFiles {
-    private int[] args = {5};
+    
     public static void main(String[] args) {
        SearchFiles searchFiles = new SearchFiles();
         searchFiles.startSearch(args);
@@ -19,7 +19,7 @@ public class SearchFiles {
     public void startSearch(String [] args){
         Validator validator = new Validator();
         if(validator.valid(args)) {
-            String findParam = args[4];
+            String findParam = args[1];
             if(findParam.equals("-m")) {
                 SearchByMask mask = new SearchByMask();
                 mask.find(args);
