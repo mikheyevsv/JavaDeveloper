@@ -17,7 +17,7 @@ public class PrimesValues implements Iterator <Integer>{
 
     @Override
     public boolean hasNext() {
-        return false;
+        return this.index < this.value.length;
     }
 
     @Override
