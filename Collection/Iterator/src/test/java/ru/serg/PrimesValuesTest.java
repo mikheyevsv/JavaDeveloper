@@ -10,19 +10,21 @@ import static org.junit.Assert.assertThat;
  * @author Sergey Miheev. Create on 17.08.2016
  * @version 1.0
  */
+
+
 public class PrimesValuesTest {
 
     @Test
     public void whenPassesThroughArrayIteratorMovesForward() {
 
         PrimesValues iterator = new PrimesValues(new int[]{1, 2, 3});
+
         iterator.next();
         iterator.next();
         iterator.next();
         boolean res = iterator.hasNext();
 
         assertThat(res, is(false));
-
     }
 
     @Test
@@ -38,4 +40,6 @@ public class PrimesValuesTest {
 
         assertThat(Arrays.toString(act), is(Arrays.toString(exp)));
     }
+
+
 }
