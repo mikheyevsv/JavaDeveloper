@@ -2,8 +2,6 @@ package ru.serg;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 /**
@@ -16,29 +14,21 @@ public class PrimesValuesTest {
 
     @Test
     public void whenPassesThroughArrayIteratorMovesForward() {
+        PrimesValues primesValues = new PrimesValues(new int[]{-6, 0, 5});
 
-        PrimesValues iterator = new PrimesValues(new int[]{1, 2, 3});
+        int result = primesValues.next();
 
-        iterator.next();
-        iterator.next();
-        iterator.next();
-        boolean res = iterator.hasNext();
-
-        assertThat(res, is(false));
+        assertThat(result, is(5));
     }
 
     @Test
     public void whenIteratorMovedThroughArrayShouldReturnCorrectValue(){
-        PrimesValues iterator = new PrimesValues(new int[]{1, 2, 3, 4});
-        int [] exp = new int[]{2, 3, 4};
 
-        int index = 0;
-        int [] act = new int[exp.length];
-        while (iterator.hasNext()){
-            act[index++] = iterator.next();
-        }
+        PrimesValues primesValues = new PrimesValues(new int[]{3});
 
-        assertThat(Arrays.toString(act), is(Arrays.toString(exp)));
+        boolean res = primesValues.hasNext();
+
+        assertThat(res, is(false));
     }
 
 

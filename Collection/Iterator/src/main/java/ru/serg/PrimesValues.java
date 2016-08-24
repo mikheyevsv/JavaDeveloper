@@ -17,20 +17,30 @@ public class PrimesValues implements Iterator <Integer>{
 
     @Override
     public boolean hasNext() {
-        return this.index < this.value.length;
+        boolean result = false;
+        int i = this.index;
+        while (++i < this.value.length) {
+            int numb = this.value[i];
+            if (this.isPrime(numb)) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     @Override
     public Integer next() {
-        int res = 0;
-        while (this.index < this.value.length){
-           if(isPrime(this.value[this.index])){
-                res = this.value[this.index++];
-               break;
+        int result = 0;
+        while(this.index < this.value.length) {
+            if(isPrime(this.value[this.index])) {
+                result = this.value[this.index++];
+                break;
             }
             this.index++;
         }
-        return res;
+
+        return result;
     }
 
     private boolean isPrime(int val){
