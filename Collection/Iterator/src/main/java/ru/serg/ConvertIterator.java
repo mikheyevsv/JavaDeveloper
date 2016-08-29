@@ -6,14 +6,18 @@ import java.util.Iterator;
  * @author Sergey Miheev. Create on 29.08.2016
  * @version 1.0
  */
-public class ConvertIterator implements Iterator {
+public class ConvertIterator implements Iterator<Integer> {
+
+    private Iterator<Iterator<Integer>> iterator;
+
+
     @Override
     public boolean hasNext() {
         return false;
     }
 
     @Override
-    public Object next() {
+    public Integer next() {
         return null;
     }
 }
