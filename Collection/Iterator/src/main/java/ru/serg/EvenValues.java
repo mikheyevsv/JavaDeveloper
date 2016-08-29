@@ -17,11 +17,29 @@ public class EvenValues implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        return false;
+        boolean result = false;
+        int i = this.index;
+        while (++i < this.value.length) {
+            if (this.value[i] % 2 == 0) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     @Override
     public Integer next() {
-        return null;
+        int result = -1;
+
+        while (index < value.length) {
+            if (value[index] % 2 == 0) {
+                result = value[index];
+                index++;
+                break;
+            }
+            index++;
+        }
+        return result;
     }
 }

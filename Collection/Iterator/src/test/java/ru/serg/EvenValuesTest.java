@@ -46,4 +46,5 @@ public class EvenValuesTest {
         assertThat(even.next(),is(6));
     }
 
+
 }
