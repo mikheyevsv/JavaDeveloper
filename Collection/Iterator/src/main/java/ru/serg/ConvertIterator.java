@@ -9,6 +9,12 @@ import java.util.Iterator;
 public class ConvertIterator implements Iterator<Integer> {
 
     private Iterator<Iterator<Integer>> iterator;
+    private Iterator<Integer>position;
+
+    public Iterator<Integer> convertation (Iterator<Iterator<Integer>> iterator){
+        this.iterator = iterator;
+        return this;
+    }
 
 
     @Override
