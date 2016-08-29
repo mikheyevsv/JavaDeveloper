@@ -34,8 +34,7 @@ public class EvenValues implements Iterator<Integer> {
 
         while (index < value.length) {
             if (value[index] % 2 == 0) {
-                result = value[index];
-                index++;
+                result = value[index++];
                 break;
             }
             index++;
