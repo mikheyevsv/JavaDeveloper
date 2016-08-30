@@ -6,12 +6,12 @@ import java.util.Iterator;
  * @author Sergey Miheev. Create on 29.08.2016
  * @version 1.0
  */
-public class ConvertIterator implements Convert{
+public class ConvertIterator implements Iterator<Integer>{
 
     private Iterator<Iterator<Integer>> iterators;
     private Iterator<Integer>position;
 
-    @Override
+
     public Iterator<Integer> convertation (final Iterator<Iterator<Integer>> it){
         this.iterators = it;
         return this;
