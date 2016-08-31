@@ -12,19 +12,24 @@ public class ConvertIterator implements Iterator<Integer>{
     private Iterator<Integer>position;
 
 
-    public Iterator<Integer> convertation (final Iterator<Iterator<Integer>> it){
-        this.iterators = it;
+    public Iterator<Integer> convertation (Iterator<Iterator<Integer>> iterators){
+        this.iterators = iterators;
         return this;
     }
 
 
     @Override
     public boolean hasNext() {
-        return false;
+        return iterators.hasNext();
     }
 
     @Override
     public Integer next() {
-        return null;
+        if(position == null){
+            position = iterators.next();
+        }else if (!position.hasNext()){
+            position = iterators.next();
+        }
+        return position.next();
     }
 }

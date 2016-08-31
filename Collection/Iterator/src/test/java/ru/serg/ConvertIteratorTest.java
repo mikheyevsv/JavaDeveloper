@@ -18,16 +18,14 @@ public class ConvertIteratorTest {
     @Test
     public void whenCombineIteratorRunsOnAllOperators(){
         ConvertIterator convertIterator = new ConvertIterator();
-        List<Integer> list1 = new ArrayList<>(Arrays.asList(4, 2, 0, 4, 6, 4, 9));
-        List<Integer> list2 = new ArrayList<>(Arrays.asList(0, 9, 8, 7, 5));
-        List<Integer> list3 = new ArrayList<>(Arrays.asList(1, 3, 5, 6, 7, 0, 9, 8, 4));
+        List<Integer> list1 = new ArrayList<>(Arrays.asList(1, 2, 3));
+        List<Integer> list2 = new ArrayList<>(Arrays.asList(4, 5, 6));
 
-        List<Iterator<Integer>> combo = new ArrayList<>(Arrays.asList(list1.iterator(), list2.iterator(),
-                                                                      list3.iterator()));
+        List<Iterator<Integer>> combo = new ArrayList<>(Arrays.asList(list1.iterator(), list2.iterator()));
         Iterator<Integer> iterator = convertIterator.convertation(combo.iterator());
 
-        int exp [] = new int[21];
-        int act [] = {4, 2, 0, 4, 6, 4, 9, 0, 9, 8, 7, 5, 1, 3, 5, 6, 7, 0, 9, 8, 4};
+        int act [] = new int[6];
+        int exp [] = {1, 2, 3, 4, 5, 6};
         int index = 0;
         while (iterator.hasNext()){
             act[index++] = iterator.next();
