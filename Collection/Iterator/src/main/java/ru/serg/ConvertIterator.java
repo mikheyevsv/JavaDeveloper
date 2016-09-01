@@ -20,7 +20,7 @@ public class ConvertIterator implements Iterator<Integer>{
 
     @Override
     public boolean hasNext() {
-        return iterators.hasNext();
+        return iterators.hasNext() || (position != null && position.hasNext() );
     }
 
     @Override
