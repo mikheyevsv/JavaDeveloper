@@ -16,7 +16,7 @@ public class SimpleArrayTest {
     @BeforeClass
     public static void initialize(){
          sa = new SimpleArray<String>(4);
-    }yy
+    }
 
     @Test
     public void whenCreateContainerShouldReturnSameType(){
@@ -24,5 +24,24 @@ public class SimpleArrayTest {
         String res = (String) sa.get(0);
 
         assertThat(res, is("test"));
+    }
+
+    @Test
+    public void whenCreateContainerShouldReturnUpdate(){
+        sa.add("test");
+        sa.update(1, "set");
+
+        String res = (String) sa.get(1);
+
+        assertThat(res, is("set"));
+    }
+    @Test
+    public void whenCreateContainerShouldReturnDelete(){
+        sa.add("test");
+        sa.delete(0);
+
+        String res = (String) sa.get(0);
+
+        assertEquals(null, res);
     }
 }

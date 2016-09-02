@@ -16,12 +16,17 @@ public class SimpleArray <T> {
         this.container[index++] = value;
     }
 
-    public void update(){}
+    public void update(int position, T val){
+        container[position] = val;
+    }
 
-    public void delete(){}
+    public void delete(int position){
+        System.arraycopy(this.container, 0, this.container, 0, position);
+        System.arraycopy(this.container, position+1, this.container, position, this.index);
+    }
 
-    public T get(int pozition){
-        return (T) this.container[pozition] ;
+    public T get(int position){
+        return (T) this.container[position] ;
     }
 
 }
