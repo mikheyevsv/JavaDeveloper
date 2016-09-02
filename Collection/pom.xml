@@ -12,6 +12,7 @@
     <artifactId>Collection</artifactId>
     <modules>
         <module>Iterator</module>
+        <module>Generic</module>
     </modules>
 
 
