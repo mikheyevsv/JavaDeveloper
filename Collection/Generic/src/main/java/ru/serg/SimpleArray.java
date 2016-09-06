@@ -25,7 +25,8 @@ public class SimpleArray <T> {
         System.arraycopy(this.container, position+1, this.container, position, this.index);
     }
 
-    public T get(int position){
+    public T get(int position)
+    {
         return (T) this.container[position] ;
     }
 
