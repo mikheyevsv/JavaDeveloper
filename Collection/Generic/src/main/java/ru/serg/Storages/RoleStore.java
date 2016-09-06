@@ -21,17 +21,17 @@ public class  RoleStore implements Store<Role>{
     }
 
     @Override
-    public void delete(int position) {
-        role.delete(position);
+    public void delete(int id) {
+        role.delete(id);
     }
 
     @Override
-    public void update(int position, Role val) {
-        role.update(position, val);
+    public void update(int id, Role val) {
+        role.update(id, val);
     }
 
     @Override
-    public Role get(int position) {
-        return role.get(position);
+    public Role get(int id) {
+        return role.get(id);
     }
 }

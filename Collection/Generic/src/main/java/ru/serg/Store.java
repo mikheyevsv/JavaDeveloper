@@ -7,9 +7,9 @@ public interface Store<T extends Base> {
 
     void add (T value);
 
-    void delete(int position);
+    void delete(int id);
 
-    void update(int position, T val);
+    void update(int id, T val);
 
-    T get(int position);
+    T get(int id);
 }

@@ -21,17 +21,17 @@ public class UserStore implements Store<User> {
     }
 
     @Override
-    public void delete(int position) {
-        user.delete(position);
+    public void delete(int id) {
+        user.delete(id);
     }
 
     @Override
-    public void update(int position, User val) {
-        user.update(position, val);
+    public void update(int id, User val) {
+        user.update(id, val);
     }
 
     @Override
-    public User get(int position) {
-        return user.get(position);
+    public User get(int id) {
+        return user.get(id);
     }
 }
