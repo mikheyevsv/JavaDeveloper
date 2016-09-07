@@ -35,4 +35,19 @@ public class UserStoreTest {
         assertThat(res, is(false));
     }
 
+
+    @Test
+    public void updateOneShouldFalse() {
+        User user = new User();
+        user.setId("one");
+
+        userStore.add(user);
+
+        User user1 = new User();
+        user.setId("two");
+
+        boolean res = userStore.update(user1);
+
+        assertThat(res, is(false));
+    }
 }

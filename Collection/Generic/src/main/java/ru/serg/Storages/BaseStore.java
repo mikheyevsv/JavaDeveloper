@@ -41,9 +41,16 @@ import ru.serg.Store;
         return true;
     }
 
-    @Override
     public boolean update(T val) {
-        return false;
+        if(val == null){
+            return false;
+        }
+        T param = this.get(val.getId());
+        if (param == null){
+            return false;
+        }
+        this.array.update(param, val);
+        return true;
     }
 
     @Override

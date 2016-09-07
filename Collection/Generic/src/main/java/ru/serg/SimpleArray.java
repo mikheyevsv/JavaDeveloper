@@ -16,8 +16,8 @@ public class SimpleArray <T> {
         this.container[index++] = value;
     }
 
-    public void update(int position, T val){
-        container[position] = val;
+    public void update(T position, T val){
+        container[(Integer) position] = val;
     }
 
     public void delete(T position){
