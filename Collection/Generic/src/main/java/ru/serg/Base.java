@@ -5,8 +5,14 @@ package ru.serg;
  */
 public abstract class Base {
 
+    private String id;
 
-    public abstract String getId();
+    public String getId() {
+        return id;
+    }
 
-    public abstract void setId(String id);
+    public void setId(String id) {
+        this.id = id;
+    }
+
 }

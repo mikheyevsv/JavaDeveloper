@@ -5,11 +5,11 @@ package ru.serg;
  */
 public interface Store<T extends Base> {
 
-    void add (T value);
+    boolean add (T value);
 
-    void delete(int id);
+    boolean delete(String id);
 
-    void update(int id, T val);
+    boolean update(T val);
 
-    T get(int id);
+    T get(String id);
 }
