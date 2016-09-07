@@ -30,7 +30,15 @@ import ru.serg.Store;
 
     @Override
     public boolean delete(String id) {
-        return false;
+        if(id == null){
+            return false;
+        }
+        T param = this.get(id);
+        if (param == null){
+            return false;
+        }
+        this.array.delete(param);
+        return true;
     }
 
     @Override

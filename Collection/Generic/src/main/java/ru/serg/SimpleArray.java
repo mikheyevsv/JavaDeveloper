@@ -20,9 +20,9 @@ public class SimpleArray <T> {
         container[position] = val;
     }
 
-    public void delete(int position){
-        System.arraycopy(this.container, 0, this.container, 0, position);
-        System.arraycopy(this.container, position+1, this.container, position, this.index);
+    public void delete(T position){
+        System.arraycopy(this.container, 0, this.container, 0, (Integer) position);
+        System.arraycopy(this.container, (Integer) position+1, this.container, (Integer) position, this.index);
     }
 
     public T get(int position)
