@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  */
 public class UserStoreTest {
 
-    private UserStore userStore = new UserStore(5);
+    private UserStore userStore = new UserStore(10);
 
     @Test
     public void addOneShouldTrue(){
@@ -49,5 +49,13 @@ public class UserStoreTest {
         boolean res = userStore.update(user1);
 
         assertThat(res, is(false));
+    }
+
+    @Test
+    public void getFirstReturnNull(){
+
+        User res = this.userStore.get("one");
+
+        assertNull(res);
     }
 }

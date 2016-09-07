@@ -55,6 +55,18 @@ import ru.serg.Store;
 
     @Override
     public T get(String id) {
-        return null;
+        T res = null;
+        int value = 0;
+        if (id == null) {
+            return res;
+        }
+        for (int i = 0; i < value; i++) {
+            T param = this.array.get(i);
+            if (id.equals(param.getId())){
+                res = param;
+                break;
+            }
+        }
+        return res;
     }
 }
