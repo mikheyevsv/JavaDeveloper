@@ -60,6 +60,7 @@ import ru.serg.Store;
         if (id == null) {
             return res;
         }
+        
         for (int i = 0; i < value; i++) {
             T param = this.array.get(i);
             if (id.equals(param.getId())){

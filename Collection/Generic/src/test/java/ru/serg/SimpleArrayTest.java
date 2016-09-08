@@ -42,6 +42,6 @@ public class SimpleArrayTest {
 
         String res = (String) sa.get(0);
 
-        assertEquals(res, null);
+        assertNull(res, null);
     }
 }
