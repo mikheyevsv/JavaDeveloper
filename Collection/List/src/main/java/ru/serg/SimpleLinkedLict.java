@@ -20,7 +20,6 @@ public class SimpleLinkedLict <E> implements Container<E>, Iterable<E> {
             this.firstEntry = new Entry<>(element, null);
         }
         size++;
-
     }
 
     @Override

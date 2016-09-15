@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
  * Created by Serg on 15.09.2016.
  */
 public class SimpleLinkedLictTest {
-    
+
 
     @Test
     public void testAddOneElement(){
