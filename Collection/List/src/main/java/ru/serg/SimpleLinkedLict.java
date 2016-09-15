@@ -1,8 +1,6 @@
 package ru.serg;
 
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 /**
@@ -27,8 +25,13 @@ public class SimpleLinkedLict <E> implements Container<E>, Iterable<E> {
 
     @Override
     public E get(int index) {
-        return null;
+        Entry<E> entry = this.firstEntry;
+        for (int i = 0; i < index ; i++) {
+            entry = entry.next;
+        }
+        return entry.element;
     }
+
 
     @Override
     public Iterator<E> iterator() {

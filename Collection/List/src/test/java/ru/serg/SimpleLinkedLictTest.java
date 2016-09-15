@@ -10,16 +10,11 @@ import static org.junit.Assert.*;
  * Created by Serg on 15.09.2016.
  */
 public class SimpleLinkedLictTest {
-
-    private static SimpleLinkedLict<String>linkedLict;
-
-    @BeforeClass
-    public static void initialize(){
-        linkedLict = new SimpleLinkedLict<>();
-    }
+    
 
     @Test
     public void testAddOneElement(){
+        SimpleLinkedLict<String>linkedLict = new SimpleLinkedLict<>();
         linkedLict.add("0");
 
         int res = linkedLict.size();
@@ -29,11 +24,37 @@ public class SimpleLinkedLictTest {
 
     @Test
     public void testAddTwoElement(){
+        SimpleLinkedLict<String>linkedLict = new SimpleLinkedLict<>();
         linkedLict.add("0");
         linkedLict.add("1");
 
         int res = linkedLict.size();
 
         assertThat(res, is(2));
+    }
+
+    @Test
+    public void testGetTwoElement(){
+        SimpleLinkedLict<String>linkedLict = new SimpleLinkedLict<>();
+        linkedLict.add("0");
+        linkedLict.add("1");
+
+        String res = linkedLict.get(0);
+        int size = linkedLict.size();
+
+        assertThat(res, is("0"));
+        assertThat(size, is(2));
+    }
+
+    @Test
+    public void testGetOneElement(){
+        SimpleLinkedLict<String>linkedLict = new SimpleLinkedLict<>();
+        linkedLict.add("0");
+
+        String res = linkedLict.get(0);
+        int size = linkedLict.size();
+
+        assertThat(res, is("0"));
+        assertThat(size, is(1));
     }
 }
