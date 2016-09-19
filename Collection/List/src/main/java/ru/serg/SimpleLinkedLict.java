@@ -65,7 +65,7 @@ public class SimpleLinkedLict <E> implements Container<E>, Iterable<E> {
     private class LinkedListIterator<E> implements Iterator<E>{
 
         private int current = 0;
-        private boolean donext = false;
+
         @Override
         public boolean hasNext() {
             boolean res = false;
@@ -81,7 +81,6 @@ public class SimpleLinkedLict <E> implements Container<E>, Iterable<E> {
                 throw new NoSuchElementException();
             }
             E res = (E) get(current++);
-            this.donext = true;
             return res;
         }
     }
