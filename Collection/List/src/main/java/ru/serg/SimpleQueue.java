@@ -1,7 +1,7 @@
 package ru.serg;
 
 import java.util.Iterator;
-import java.util.Queue;
+
 
 /**
  * Created by Serg on 15.09.2016.
@@ -27,7 +27,7 @@ public class SimpleQueue<E> implements ContainerQueue<E>, Iterable<E> {
     @Override
     public E dequeue() {
         E res = null;
-        if (queue.size() != 0){
+        if (queue.size() != 0) {
             res = queue.get(0);
         }
         return res;
