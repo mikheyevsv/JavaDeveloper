@@ -13,11 +13,18 @@ public class SimpleStackTest {
     SimpleStack<String> ss = new SimpleStack<>();
 
     @Test
-    public void whenAddElementInStackShouldElementAddInHead(){
+    public void whenAddElementInStackShouldReturnTrue(){
 
         String res = ss.push("one");
 
         assertTrue(res, true);
     }
 
+    @Test
+    public void whenAddElementInStackShouldReturnFalse(){
+
+        String res = ss.push("");
+
+        assertFalse(res, false);
+    }
 }
