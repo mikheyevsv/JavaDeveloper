@@ -16,6 +16,7 @@ public class SimpleQueueTest {
 
         sq.enqueue("one");
 
+
         String res = sq.dequeue();
 
         assertThat(res, is("one"));
