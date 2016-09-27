@@ -31,7 +31,6 @@ public class SimpleLinkedLict <E> implements Container<E>, Iterable<E> {
         return entry.element;
     }
 
-
     @Override
     public Iterator<E> iterator() {
         return new LinkedListIterator<>();

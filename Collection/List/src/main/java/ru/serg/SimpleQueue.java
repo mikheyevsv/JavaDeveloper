@@ -27,6 +27,7 @@ public class SimpleQueue<E> implements ContainerQueue<E>, Iterable<E> {
     @Override
     public E dequeue() {
         E res = queue.iterator().next();
+        queue.iterator().remove();
 
         return res;
     }
