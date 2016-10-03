@@ -21,7 +21,11 @@ public class SimpleStack<E> implements StackContainer<E>, Iterable<E> {
 
     @Override
     public E pop() {
-        return null;
+        E result = null;
+        if (stack.size() != 0) {
+            result = stack.get(stack.size() - 1);
+        }
+        return result;
     }
 
     @Override

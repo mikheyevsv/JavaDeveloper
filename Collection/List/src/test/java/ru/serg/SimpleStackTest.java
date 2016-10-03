@@ -27,4 +27,13 @@ public class SimpleStackTest {
 
         assertFalse(res, false);
     }
+
+    @Test
+    public void testPopWhenStackIsNotEmptyShouldReturnLastAddedWithDeleting() {
+        this.ss.push("first");
+        String first = this.ss.pop();
+
+        assertThat(first, is("first"));
+
+    }
 }
